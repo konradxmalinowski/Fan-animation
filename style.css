@@ -1,0 +1,186 @@
+:root {
+    --color1: #3A1078;
+    --color2: #4E31AA;
+    --color4: #F7F7F8;
+    --color5: #982B1C;
+    --color5_1: #680c00;
+    --color6: #00712D;
+    --color6_1: #003d18;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: var(--color2);
+    color: var(--color4);
+}
+
+body {
+    width: 100vw;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #16161a;
+}
+
+main {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+#fan {
+    width: 200px;
+    height: 200px;
+    border: 3px solid var(--color1);
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 100px);
+    top: calc(50% - 220px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#circle {
+    width: 80%;
+    height: 80%;
+    border: 3px solid var(--color1);
+    border-radius: 50%;
+    position: relative;
+}
+
+.wings {
+    width: 80%;
+    height: 80%;
+    background-color: var(--color1);
+    clip-path: polygon(45% 0%, 55% 0%, 55% 45%, 100% 45%, 100% 55%, 55% 55%, 55% 100%, 45% 100%, 45% 55%, 0% 55%, 0% 45%, 45% 45%);
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.wing1 {
+    transform: rotate(40deg);
+}
+
+#leg {
+    position: absolute;
+    bottom: -45%;
+    left: calc(50% - 22.5px);
+    width: 45px;
+    height: 90px;
+    background-color: var(--color1);
+}
+
+#stand {
+    position: absolute;
+    bottom: -45%;
+    left: calc(50% - 100px);
+    height: 25px;
+    width: 200px;
+    background-color: var(--color1);
+}
+
+#buttons {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color2);
+    color: var(--color4);
+    border: none;
+    box-shadow: -4px -4px var(--color1) inset;
+}
+
+.off-btn {
+    background-color: var(--color5);
+    box-shadow: -4px -4px var(--color5_1) inset;
+}
+
+.off-btn:active {
+    box-shadow: -4px -4px var(--color5) inset;
+}
+
+.on-btn {
+    background-color: var(--color6);
+    box-shadow: -4px -4px var(--color6_1) inset;
+}
+
+.on-btn:active {
+    box-shadow: -4px -4px var(--color6) inset;
+}
+
+.button:active:not(.on-btn):not(.off-btn) {
+    box-shadow: -4px -4px var(--color2) inset;
+}
+
+.light {
+    background-color: #FFF4EA;
+}
+
+.dark {
+    color: var(--color1) !important;
+}
+
+#change-mode {
+    color: var(--color4);
+    background-image: linear-gradient(to right, var(--color1), var(--color2));
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#clock {
+    position: fixed;
+    left: 25px;
+    top: 25px;
+}
+
+#clock p {
+    color: var(--color4);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 400px) {
+    main {
+        width: 300px;
+    }
+}
+
+@keyframes rotate1 {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        transform: rotate(400deg);
+    }
+}
+
+@keyframes rotate2 {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
