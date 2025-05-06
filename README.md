@@ -36,9 +36,6 @@ Here's a quick overview of the main files and their purposes:
 - **CSS**: Styling the fan animation with flair.  
 - **JavaScript**: Adding functionality and interactivity.  
 
-## 🌈 Preview
-
-![Fan Animation Preview](https://via.placeholder.com/800x400.png?text=Fan+Animation+Preview)
 
 ## 🤝 Contributing
 
